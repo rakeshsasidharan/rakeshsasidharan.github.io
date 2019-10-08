@@ -1,14 +1,19 @@
-#chart-area svg {
-	margin-left: auto;
-    margin-right: auto;
-    display: block;
+
+.states{
+	fill:none;
+	stroke: #fff;
+	stroke-linejoin: round;
 }
 
-#logo {
-	height:50px;
+.d3-tip {
+  line-height: 1;
+  padding: 12px;
+  background: rgba(43,43,43, 0.8);
+  color: #fff;
+  border-radius: 2px;
 }
 
-.navbar-brand {
-	height: 60px;
-	padding: 5px 0px;
+.d3-tip.down {
+	-webkit-transform: translate(5em, 10em);
+	transform: translate(5em, 10em);
 }
