@@ -4,7 +4,7 @@ var canvasHeight = 500
 var canvasWidth = 800
 var chartHeight= canvasHeight - margin.top - margin.bottom
 var chartWidth = canvasWidth - margin.left - margin.right
-
+var lastUpdated = '03/16/2020'
 
 var tip = d3.tip()
 	.html(function(d) {
@@ -95,7 +95,7 @@ function ready(us) {
 
 	var totalCases = d3.sum(infection.values())
 
-	title.text("Total cases in the US - " + totalCases)
+	title.text("Total cases: " + totalCases + "(Last updated: "+lastUpdated + ")")
 
 	legend.selectAll("rect")
 		.data(legendData)
