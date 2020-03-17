@@ -8,7 +8,7 @@ var chartWidth = canvasWidth - margin.left - margin.right
 
 var tip = d3.tip()
 	.html(function(d) {
-		return "State: " + d.properties.name + " <br>Region: " + stateRegion.get(d.properties.name) + "<br>Infections: " + caseLabel.get(d.properties.name) ;
+		return "State: " + d.properties.name + " <br>Region: " + stateRegion.get(d.properties.name) + "<br>Cases: " + caseLabel.get(d.properties.name) ;
   })
 
 
@@ -27,12 +27,13 @@ var projection =  d3.geoAlbersUsa()
 
 var infection =  d3.map();
 var stateRegion = d3.map();
-var infectionLbl = d3.map();
+var caseLabel = d3.map();
 var path = d3.geoPath()
 		.projection(projection) ;
 
 var legendSize = {height: 20, width: 30}
 var legendPos = {x: 10, y: 100}
+var titlePos = {x:canvasWidth/2.5, y: 50}
 
 var y = d3.scaleLinear()
 	.domain([0,9])
@@ -44,6 +45,18 @@ var legend = d3.select("#chart-area")
 	.attr("class", "key")
 	.attr("height", canvasHeight)
 	.attr("width", 200)
+
+	var title = svg.append("text")
+		.attr("class","title")
+		.attr("height", 50)
+		.attr("width", 200)
+		.attr("x", titlePos.x)
+		.attr("y", titlePos.y )
+		.attr("fill", "#000")
+		.attr("text-anchor", "start")
+		.attr("font-weight", "bold")
+		.attr("font-size", "15px")
+
 
 var promises = [
 	d3.json("data/states-10m.json"),
@@ -79,6 +92,10 @@ function ready(us) {
 	legendData = forInversion.map(function(d){
 		return logScale.invert(d);
 	})
+
+	var totalCases = d3.sum(infection.values())
+
+	title.text("Total cases in the US - " + totalCases)
 
 	legend.selectAll("rect")
 		.data(legendData)
