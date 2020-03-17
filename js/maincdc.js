@@ -26,7 +26,8 @@ var projection =  d3.geoAlbersUsa()
 
 
 var infection =  d3.map();
-var stateRegion = d3.map() ;
+var stateRegion = d3.map();
+var infectionLbl = d3.map();
 var path = d3.geoPath()
 		.projection(projection) ;
 
