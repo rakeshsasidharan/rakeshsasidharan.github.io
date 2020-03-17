@@ -8,7 +8,7 @@ var chartWidth = canvasWidth - margin.left - margin.right
 
 var tip = d3.tip()
 	.html(function(d) {
-		return "State: " + d.properties.name + " <br>Region: " + stateRegion.get(d.properties.name) + "<br>Infections: " + infectionLbl.get(d.properties.name) ;
+		return "State: " + d.properties.name + " <br>Region: " + stateRegion.get(d.properties.name) + "<br>Infections: " + caseLabel.get(d.properties.name) ;
   })
 
 
@@ -38,7 +38,6 @@ var y = d3.scaleLinear()
 	.domain([0,9])
 	.range([10, 11 * legendSize.height])
 
-var colorRange = ["#fff5f0","#fee0d2","#fcbba1","#fc9272","#fb6a4a","#ef3b2c","#cb181d","#a50f15","#67000d"]
 
 var legend = d3.select("#chart-area")
 	.append("svg")
@@ -62,7 +61,7 @@ function ready(us) {
 	us[1].forEach(function(d){
 		infection.set(d.States, +d["Cases"]);
 		stateRegion.set(d.States, d.Region);
-		infectionLbl.set(d.States, d["CaseLabel"]);
+		caseLabel.set(d.States, d["CaseLabel"]);
 	})
 
 	var max = Math.ceil(d3.max(infection.values())/1000) * 1000  ;
