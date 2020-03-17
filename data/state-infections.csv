@@ -1,0 +1,51 @@
+﻿States,Region,CaseLabel,Cases
+Alabama,South,11 to 50,0
+Alaska,West,1 to 5,1
+Arizona,West,11 to 50,13
+Arkansas,South,11 to 50,16
+California,West,201 to 500,369
+Colorado,West,101 to 200,144
+Connecticut,Northeast,11 to 50,26
+Delaware,South,6 to 10,8
+Florida,South,101 to 200,136
+Georgia,South,101 to 200,119
+Hawaii,West,6 to 10,7
+Idaho,West,1 to 5,1
+Illinois,Midwest,51 to 100,93
+Indiana,Midwest,11 to 50,19
+Iowa,Midwest,11 to 50,22
+Kansas,Midwest,6 to 10,8
+Kentucky,South,11 to 50,20
+Louisiana,South,101 to 200,101
+Maine,Northeast,11 to 50,14
+Maryland,South,11 to 50,37
+Massachusetts,Northeast,101 to 200,164
+Michigan,Midwest,51 to 100,53
+Minnesota,Midwest,51 to 100,54
+Mississippi,South,6 to 10,10
+Missouri,Midwest,1 to 5,1
+Montana,West,6 to 10,7
+Nebraska,Midwest,11 to 50,18
+Nevada,West,11 to 50,16
+New Hampshire,Northeast,11 to 50,13
+New Jersey,Northeast,51 to 100,98
+New Mexico,West,11 to 50,17
+New York,Northeast,501 to 1000,669
+North Carolina,South,11 to 50,33
+North Dakota,Midwest,1 to 5,1
+Ohio,Midwest,11 to 50,37
+Oklahoma,South,6 to 10,9
+Oregon,West,11 to 50,39
+Pennsylvania,Northeast,51 to 100,63
+Rhode Island,Northeast,11 to 50,21
+South Carolina,South,11 to 50,28
+South Dakota,Midwest,6 to 10,9
+Tennessee,South,11 to 50,39
+Texas,South,51 to 100,67
+Utah,West,11 to 50,21
+Vermont,Northeast,1 to 5,1
+Virginia,South,51 to 100,51
+Washington,West,501 to 1000,708
+West Virginia,South,None,0
+Wisconsin,Midwest,11 to 50,27
+Wyoming,West,1 to 5,1
