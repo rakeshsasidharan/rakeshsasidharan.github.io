@@ -74,7 +74,7 @@ function ready(us) {
 	us[1].forEach(function(d){
 		infection.set(d.States, +d["Cases"]);
 		stateRegion.set(d.States, d.Region);
-		castTxt.set(d.States, d["caseLabel"]);
+		castTxt.set(d.States, d["CaseLabel"]);
 	})
 
 	var max = Math.ceil(d3.max(infection.values())/1000) * 1000  ;
