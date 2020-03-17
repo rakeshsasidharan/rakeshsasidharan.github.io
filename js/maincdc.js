@@ -8,7 +8,7 @@ var chartWidth = canvasWidth - margin.left - margin.right
 
 var tip = d3.tip()
 	.html(function(d) {
-		return "State: " + d.properties.name + " <br>Region: " + stateRegion.get(d.properties.name) + "<br>Infections: " + infection.get(d.properties.name) ;
+		return "State: " + d.properties.name + " <br>Region: " + stateRegion.get(d.properties.name) + "<br>Infections: " + infectionLbl.get(d.properties.name) ;
   })
 
 
@@ -61,6 +61,7 @@ function ready(us) {
 	us[1].forEach(function(d){
 		infection.set(d.States, +d["Cases"]);
 		stateRegion.set(d.States, d.Region);
+		infectionLbl.set(d.States, d["CaseLabel"]);
 	})
 
 	var max = Math.ceil(d3.max(infection.values())/1000) * 1000  ;
