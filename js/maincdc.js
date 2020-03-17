@@ -4,7 +4,7 @@ var canvasHeight = 500
 var canvasWidth = 800
 var chartHeight= canvasHeight - margin.top - margin.bottom
 var chartWidth = canvasWidth - margin.left - margin.right
-var lastUpdated = '03/16/2020'
+var lastUpdated = "03/16/2020"
 
 var tip = d3.tip()
 	.html(function(d) {
