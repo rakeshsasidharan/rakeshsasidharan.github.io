@@ -8,7 +8,7 @@ var chartWidth = canvasWidth - margin.left - margin.right
 
 var tip = d3.tip()
 	.html(function(d) {
-		return "State: " + d.properties.name + " <br>Region: " + stateRegion.get(d.properties.name) + "<br>Cases: " + caseLabel.get(d.properties.name) ;
+		return "State: " + d.properties.name + " <br>Region: " + stateRegion.get(d.properties.name) + "<br>Cases: " + castTxt.get(d.properties.name) ;
   })
 
 
@@ -27,7 +27,7 @@ var projection =  d3.geoAlbersUsa()
 
 var infection =  d3.map();
 var stateRegion = d3.map();
-var caseLabel = d3.map();
+var castTxt = d3.map();
 var path = d3.geoPath()
 		.projection(projection) ;
 
@@ -74,7 +74,7 @@ function ready(us) {
 	us[1].forEach(function(d){
 		infection.set(d.States, +d["Cases"]);
 		stateRegion.set(d.States, d.Region);
-		caseLabel.set(d.States, d["CaseLabel"]);
+		castTxt.set(d.States, d["caseLabel"]);
 	})
 
 	var max = Math.ceil(d3.max(infection.values())/1000) * 1000  ;
