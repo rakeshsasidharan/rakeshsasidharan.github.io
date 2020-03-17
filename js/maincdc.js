@@ -95,7 +95,7 @@ function ready(us) {
 
 	var totalCases = d3.sum(infection.values())
 
-	title.text("Total cases: " + totalCases + "(Last updated: "+lastUpdated + ")")
+	title.text("Total cases: " + totalCases + " (Last updated: "+lastUpdated + ")")
 
 	legend.selectAll("rect")
 		.data(legendData)
